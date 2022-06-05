@@ -11,8 +11,8 @@ void main() {
   runApp(
     RobotDetector(
       child: MaterialApp(
-        // home: MyApp(), // Work well !!!!!!!!!!!!!!!!!!!
-        home: MyApp2(), // Not Working ??????????????????????
+        home: MyApp(), // Work well !!!!!!!!!!!!!!!!!!!
+        // home: MyApp2(), // Not Working ??????????????????????
         navigatorObservers: [seoRouteObserver],
       ),
     ),
@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
           children: [
             // With Image.memory()..
             ImageRenderer(
-              alt: '',
-              child: Image.memory(
+              alt: 'Dot',
+              child: Image.memory( // Dot.
                 base64Decode(
-                  'iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4',
+                  'iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==',
                 ),
               ),
             ),
