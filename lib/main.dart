@@ -1,18 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:seo_renderer/helpers/renderer_state.dart';
-import 'package:seo_renderer/helpers/robot_detector_vm.dart';
-import 'package:seo_renderer/renderers/image_renderer/image_renderer_vm.dart';
-import 'package:seo_renderer/renderers/text_renderer/text_renderer_style.dart';
-import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 void main() {
   runApp(
     RobotDetector(
       child: MaterialApp(
-        home: MyApp(), // Work well !!!!!!!!!!!!!!!!!!!
-        // home: MyApp2(), // Not Working ??????????????????????
+        // home: MyApp(), // Work well !!!!!!!!!!!!!!!!!!!
+        home: MyApp2(), // Not Working ??????????????????????
         navigatorObservers: [seoRouteObserver],
       ),
     ),
@@ -29,7 +25,8 @@ class MyApp extends StatelessWidget {
             // With Image.memory()..
             ImageRenderer(
               alt: 'Dot',
-              child: Image.memory( // Dot.
+              child: Image.memory(
+                // Dot.
                 base64Decode(
                   'iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==',
                 ),
