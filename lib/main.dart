@@ -7,8 +7,8 @@ void main() {
   runApp(
     RobotDetector(
       child: MaterialApp(
-        // home: MyApp(), // Work well !!!!!!!!!!!!!!!!!!!
-        home: MyApp2(), // Not Working ??????????????????????
+       //home: MyApp(), // Work well !!!!!!!!!!!!!!!!!!!
+       home: MyApp2(), // Not Working ??????????????????????
         navigatorObservers: [seoRouteObserver],
       ),
     ),
@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            const SizedBox(height: 150),
             // With Image.memory()..
             ImageRenderer(
               alt: 'Dot',
@@ -33,9 +34,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             const TextRenderer(
-              style: TextRendererStyle.paragraph,
-              text:
-                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+              style: TextRendererStyle.header1,
               child: Text(
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
               ),
@@ -54,14 +53,13 @@ class MyApp2 extends StatelessWidget {
       body: Center(
         child: Column(
           children: const [
+            SizedBox(height: 150),
             // Without Image.memory()..
             // Only TextRenderer
             TextRenderer(
-              style: TextRendererStyle.paragraph,
-              text:
-                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+              style: TextRendererStyle.header1,
               child: Text(
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry 2.',
               ),
             ),
           ],
